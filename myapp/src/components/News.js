@@ -1,7 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NewsItem from './NewsItem';
 
 class News extends React.Component {
+    static propTypes = {
+        news: PropTypes.array.isRequired,
+        name: PropTypes.string
+    }
     render(){
         const elements = this.props.news.map(news => 
         <div key = {news.id} >
@@ -12,6 +17,7 @@ class News extends React.Component {
         </div> );
         return(
             <div>
+                { this.props.name }
                 { elements }
             </div>
         )
