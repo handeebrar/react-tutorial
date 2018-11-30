@@ -8,7 +8,7 @@ class News extends React.Component {
         name: PropTypes.oneOfType([ //sadece number ve string ifadeler kabul ediliyor
             PropTypes.number,
             PropTypes.string
-        ])
+        ]).isRequired
     };
     render(){
         const elements = this.props.news.map(news => 
