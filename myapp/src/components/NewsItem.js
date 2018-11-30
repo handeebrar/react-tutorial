@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import NewsItemCss from '../NewsItem.css';
+import React from 'react';
+import '../NewsItem.css';
 
 class NewsItem extends React.Component {
     render() {
+        const { title,description } = this.props;
         return (
             <div>
-            <h1 className = 'title'>Hello React</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum congue augue, in dictum neque hendrerit sit amet.</p>
+            <h1 className = 'title'> { title } </h1>
+            <p> {description} </p>
             </div>
         );
     }
