@@ -5,8 +5,11 @@ import NewsItem from './NewsItem';
 class News extends React.Component {
     static propTypes = {
         news: PropTypes.array.isRequired,
-        name: PropTypes.string
-    }
+        name: PropTypes.oneOfType([ //sadece number ve string ifadeler kabul ediliyor
+            PropTypes.number,
+            PropTypes.string
+        ])
+    };
     render(){
         const elements = this.props.news.map(news => 
         <div key = {news.id} >
