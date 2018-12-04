@@ -5,7 +5,7 @@ class NewsForm extends React.Component {
         super(props);
         this.addButton = this.addButton.bind(this);
     }
-    addButton(){
+    addButton = () => {
         console.log("Button clicked !");
         this.props.addNews();
     }
