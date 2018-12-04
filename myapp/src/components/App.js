@@ -22,6 +22,12 @@ const news = [{
 class App extends Component {
   addNews(){
     console.log("addNews function worked.");
+    news.push({
+      id: 4,
+      title: 'title4',
+      description: 'description4'
+    });
+    console.log(news); //console'da gozukuyor fakat ui'da gozukmuyor
   }
   render() {
     return (
