@@ -20,6 +20,10 @@ const news = [{
 }];
 
 class App extends Component {
+  state = {
+      name: 'HANDE'
+    }
+    
   addNews(){
     console.log("addNews function worked.");
     news.push({
@@ -35,6 +39,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <h1>{this.state.name}</h1>
         <News news = {news} name = {"hande"} addNews = {this.addNews}/>
       </div>
     );
