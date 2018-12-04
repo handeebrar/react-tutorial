@@ -3,16 +3,16 @@ import React from 'react';
 class NewsForm extends React.Component {
     constructor(props) {
         super(props);
-        this.addButton = this.addButton.bind(this);
+        //this.addButton = this.addButton.bind(this);
     }
-    addButton = () => {
+    addButton() {
         console.log("Button clicked !");
         this.props.addNews();
     }
     render() {
         return(
             <div>
-                <button onClick = {this.addButton}>Add</button>
+                <button onClick = { () => this.addButton() }>Add</button>
             </div>
         )
     }
