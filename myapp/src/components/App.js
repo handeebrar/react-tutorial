@@ -22,9 +22,14 @@ const news = [{
 class App extends Component {
   state = {
       name: 'HANDE'
-    }
-    
-  addNews(){
+  };
+
+  changeName = () => {
+    this.setState({
+      name: "EBRAR"
+    });
+  }
+  /*addNews(){
     console.log("addNews function worked.");
     news.push({
       id: 4,
@@ -32,7 +37,7 @@ class App extends Component {
       description: 'description4'
     });
     console.log(news); //console'da gozukuyor fakat ui'da gozukmuyor
-  }
+  }*/
   render() {
     return (
       <div className="App">
@@ -40,7 +45,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <h1>{this.state.name}</h1>
-        <News news = {news} name = {"hande"} addNews = {this.addNews}/>
+        <button onClick = {this.changeName}>Change the name</button>
       </div>
     );
   }
