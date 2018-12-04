@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import News from './News';
+import Counter from './Counter';
 
 const news = [{
   id: 1,
@@ -20,32 +21,11 @@ const news = [{
 }];
 
 class App extends Component {
-  state = {
-      name: 'HANDE'
-  };
 
-  changeName = () => {
-    this.setState({
-      name: "EBRAR" + Math.floor(Math.random() * 10)
-    });
-  }
-  /*addNews(){
-    console.log("addNews function worked.");
-    news.push({
-      id: 4,
-      title: 'title4',
-      description: 'description4'
-    });
-    console.log(news); //console'da gozukuyor fakat ui'da gozukmuyor
-  }*/
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <h1>{this.state.name}</h1>
-        <button onClick = {this.changeName}>Change the name</button>
+      <Counter />
       </div>
     );
   }
