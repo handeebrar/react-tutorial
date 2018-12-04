@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import News from './News';
 import Counter from './Counter';
+import Footer from './Footer';
 
 const news = [{
   id: 1,
@@ -26,6 +27,7 @@ class App extends Component {
     return (
       <div className="App">
       <Counter />
+      <Footer />
       </div>
     );
   }
