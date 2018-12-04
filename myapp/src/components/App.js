@@ -26,7 +26,7 @@ class App extends Component {
 
   changeName = () => {
     this.setState({
-      name: "EBRAR"
+      name: "EBRAR" + Math.floor(Math.random() * 10)
     });
   }
   /*addNews(){
